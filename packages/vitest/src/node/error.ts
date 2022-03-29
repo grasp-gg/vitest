@@ -12,7 +12,7 @@ import { unifiedDiff } from './diff'
 
 export function fileFromParsedStack(stack: ParsedStack) {
   if (stack?.sourcePos?.source?.startsWith('..'))
-    return join(stack.file, '../', stack.sourcePos.source)
+    return join(stack.file, stack.sourcePos.source)
   return stack.file
 }
 
